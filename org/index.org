@@ -1,1 +1,6 @@
-Apuntes
+#+TITLE:Apuntes
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+
+
+Aca van algunos apuntas desordenados.
+
