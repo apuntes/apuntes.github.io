@@ -1,0 +1,43 @@
+* Definiciones
+** <<funciones iniciales>> Funciones iniciales
+$$ s(x) = x + 1 $$
+$$ n(x) = 0 $$
+$$ u^n_i(x_1,\dots,n_n) = x_i $$
+** Composición
+Sean $f: \mathbb{N}^k \to \mathbb{N}$ y
+$g_1, \dots, g_k: \mathbb{N}^n \to \mathbb{N}$.
+
+$h: \mathbb{N}^n \to \mathbb{N}$ se obtiene por /composición/ a partir
+de $f, g_1, \dots, g_k$ si:
+
+$$ h(x_1, \dots, x_n) = f(g_1(x_1,\dots,x_n),\dots,g_k(x_1,\dots,x_n)) $$
+** TODO Funciones primitivas recursivas
+
+** TODO Clases PRC
+Una clase $C$ de funciones totales es PRC si:
+1. las [[funciones iniciales][funciones iniciales]] están en C
+1. toda función que se obtenga mediante composición o recursión primitiva
+   de otras funciones pertenecientes a $C$ está en $C$.
+
+** TODO Codificación de pares
+
+** TODO Codificación de secuencias
+
+** TODO Lenguaje deprogramasión /S/
+
+** TODO Estados
+
+** TODO Descripcion instantánea
+
+** TODO Cómputo
+
+** S-parcial computable
+Una función (parcial) $f: \mathbb{N}^m \to \mathbb{N}$ es
+/S-parcial computable/ si existe un programa /P/ tal que:
+
+$$ f(r_1, \dots, r_m) = \Psi^{(m)}_P(r_1, \dots, r_m) $$
+
+donde $\Psi^{(m)}_P(r_1, \dots, r_m)$ es:
++ el valor de $Y$ en el estado final del programa $P$, si 
+  el programa termina.
++ está indefinido si no.
