@@ -4,6 +4,9 @@
   (require 'ox-publish)
   (setq org-publish-project-alist
         `(("apuntes"
+           :with-author nil
+           :with-toc nil
+           ;:with-creator nil
            :base-directory "~/apuntes.github.io/org"
            :recursive t
            :publishing-directory "~/apuntes.github.io/"

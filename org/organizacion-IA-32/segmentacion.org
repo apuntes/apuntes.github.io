@@ -1,0 +1,55 @@
+* Segmentación
+
+** Direcciones lineales
+
+Una dirección lógica es un **selector de segmento** y un **offset**.
+
+Ejemplo:
+
+#+begin_src text
+     selector de segmento
+           |
+           |
+           v
+         0x10:0x000008FE   <--- offset
+#+end_src
+
+Dada una dirección lógica, se obtiene una dirección lineal del siguiente
+modo:
+
+Obviamente, el selector de segmento se usa para obtener el segmento. De ese
+selector se obtiene el índice de la tabla -GDT (Global Descriptor Table) si
+el tercer bit es 1- donde se busca un __selector de segmento__.
+
+Pero el índice no se conforma de todos
+los bits del _selector de segmento_, sino los 13 bits más significativos (del
+bit 3 al 15). 
+
+#+NAME: selector-de-segmento
+#+begin_src
+
+Selector de segmento 
+======== == ========
+
+
+  15            3 2  0 
+  +-------------+-+--+
+  |             | |  | <--- Requested Provilege Level
+  +-------------+-+--+
+         |       |  
+      índice    Table
+               Indicator
+#+end_src
+
+Retomando nuestro ejemplo:
+=10h = 0001 0000b=, de modo que el índice es 
+=10b = 2h=, o sea $2$. Como TI (Table Indicator) es 0 la dirección se 
+busca en la GDT, el tercer __descriptor de segmento__ que haya (pues el índice 
+2 selecciona el tercero). 
+
+El _descriptor de segmento_ es una estrutura con varios campos, uno de los 
+cuales es el __base address__ que indica dónde comienza el segmento en cuestión.
+Otro campo es el __limit__, que indica el tamaño en bytes del segmento.
+
+Entonces, el _offset_ de la dirección lógica se suma a la _base address_ y así
+se obtiene la dirección lineal.

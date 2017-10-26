@@ -6,4 +6,4 @@ Aca van algunos apuntas desordenados.
 
 [[./computabilidad/index.html][logica]]
 
-[[./orga/index.html][orga]]
+[[./organizacion-IA-32/index.html][organizacion IA-32]]
