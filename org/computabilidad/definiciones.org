@@ -1,8 +1,11 @@
 #+OPTIONS: tex:dvipng 
 * Definiciones
 ** <<funciones iniciales>> Funciones iniciales
+
 $$ s(x) = x + 1 $$
+
 $$ n(x) = 0 $$
+
 $$ u^n_i(x_1,\dots,n_n) = x_i $$
 ** Composición
 Sean $f: \mathbb{N}^k \to \mathbb{N}$ y
