@@ -1,3 +1,4 @@
+#+OPTIONS: tex:dvipng 
 * Definiciones
 ** <<funciones iniciales>> Funciones iniciales
 $$ s(x) = x + 1 $$

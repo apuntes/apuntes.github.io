@@ -43,7 +43,7 @@ Selector de segmento
 
 Retomando nuestro ejemplo:
 =10h = 0001 0000b=, de modo que el índice es 
-=10b = 2h=, o sea $2$. Como TI (Table Indicator) es 0 la dirección se 
+=10b = 2h=, o sea 2. Como TI (Table Indicator) es 0 la dirección se 
 busca en la GDT, el tercer __descriptor de segmento__ que haya (pues el índice 
 2 selecciona el tercero). 
 
