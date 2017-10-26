@@ -1,16 +1,42 @@
 * Definiciones
 ** <<funciones iniciales>> Funciones iniciales
-$$ s(x) = x + 1 $$
-$$ n(x) = 0 $$
-$$ u^n_i(x_1,\dots,n_n) = x_i $$
+
+\begin{eqnarray*}
+\hat{f}(x) & \propto & \sum_{\nu} \frac{|F(\nu)H(\nu)|^2}{|N(\nu)|^2}  
+           \frac{G(\nu)}{H(\nu)} e^{\frac{2 \pi i \nu x}{N}}\\
+           & \propto & \sum_{\nu} \frac{|F(\nu)|^2}{|N(\nu)|^2} H(\nu) H^*(\nu) 
+           \frac{G(\nu)}{H(\nu)} e^{\frac{2 \pi i \nu x}{N}}\\
+           & \propto & \sum_{\nu} H^*(\nu) G(\nu) e^{\frac{2 \pi i \nu x}{N}}
+\end{eqnarray*}
+
+\[
+ s(x) = x + 1 
+\]
+\[
+ n(x) = 0 
+\]
+\[
+ u^n_i(x_1,\dots,n_n) = x_i 
+\]
+
+
 ** Composición
-Sean $f: \mathbb{N}^k \to \mathbb{N}$ y
-$g_1, \dots, g_k: \mathbb{N}^n \to \mathbb{N}$.
+Sean 
+\[
+ f: \mathbb{N}^k \to \mathbb{N}
+\]
+ y 
+
+\[
+g_1, \dots, g_k: \mathbb{N}^n \to \mathbb{N}.
+\]
 
 $h: \mathbb{N}^n \to \mathbb{N}$ se obtiene por /composición/ a partir
 de $f, g_1, \dots, g_k$ si:
 
-$$ h(x_1, \dots, x_n) = f(g_1(x_1,\dots,x_n),\dots,g_k(x_1,\dots,x_n)) $$
+\[
+ h(x_1, \dots, x_n) = f(g_1(x_1,\dots,x_n),\dots,g_k(x_1,\dots,x_n)) 
+\]
 ** TODO Funciones primitivas recursivas
 
 ** TODO Clases PRC
@@ -35,7 +61,9 @@ Una clase $C$ de funciones totales es PRC si:
 Una función (parcial) $f: \mathbb{N}^m \to \mathbb{N}$ es
 /S-parcial computable/ si existe un programa /P/ tal que:
 
-$$ f(r_1, \dots, r_m) = \Psi^{(m)}_P(r_1, \dots, r_m) $$
+\[
+ f(r_1, \dots, r_m) = \Psi^{(m)}_P(r_1, \dots, r_m) 
+\]
 
 donde $\Psi^{(m)}_P(r_1, \dots, r_m)$ es:
 + el valor de $Y$ en el estado final del programa $P$, si 
