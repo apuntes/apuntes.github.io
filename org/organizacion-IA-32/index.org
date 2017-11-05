@@ -1,1 +1,5 @@
-[[./segmentacion.html][segmentacion]]
+Organizacion del computador
+
+* [[./segmentacion.html][segmentacion]]
+
+* [[./index-simd.html][simd]]

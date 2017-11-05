@@ -1,0 +1,15 @@
+* PSUB{B,W,D,Q} p1121 Substractr Packed Integers
+~PADDB xmm1, xmm2/m128~
+
+** Descripcion
+
+Realiza la resta de los enteros empaquetados (bytes, words, doublewords)
+entre ambos operandos, guardando el resultado en el primer operando
+(*dest*).
+
+PADDB resta /bytes/, PADDW resta /words/, PADDD resta /doublewords/,
+PADDQ resta /quadwwords/.
+
+
+Si se produce un overflow, el carry es ignorado.
+

@@ -1,0 +1,72 @@
+* SIMD
+SIMD signifnica Single Instruction Multiple Data.
+
+** Aritmética sobre enteros
+
+*** Suma
+**** [[./simd-paddb.org][PADD{B,W,D,Q} p860]]
+Add Packed Integers
+**** PADD{SB,SW}
+Add Packed Signed Integers with Signed Saturation
+**** PADD{USB,USW}
+Add Packed Unsigned Integers with Unsigned Saturation
+
+*** Resta
+**** [[./simd-psubb.org][PSUB{B,W,D,Q} p1121]]
+Substract Packed Integers
+**** PSUB{SB,SW}
+Substract Packed Unsigned Integers with Unsigned Saturation
+**** PSUB{USB,USW}
+Substract Packed Unsigned Integers with Unsigned Saturation
+
+*** Producto
+**** PMULHW p1025
+Multiply Packed Signed Integers and Store High Result
+**** PMULHUW p1021
+Multiply Packed Unsigned Integers and Store High Result
+**** PMULL{D,Q}
+Multiply Packed Integers and Store Low Result
+**** PMULLW
+Multiply Packed Signed Integers and Store Low Result
+**** PMULUDQ 
+Multiply Packed Unsigned Doubleword Integers
+
+*** Shift Aritmético
+**** PSRA{W,D,Q}
+Shift Packed Data Right Aritmetic
+**** PSRLDQ
+Shift Double Quadword Right Logical
+**** PSRL{W,D,Q}
+Shift Packed Data Right Logical
+
+*** Conversión
+
+**** CVTDQ2PD
+Convert Packed Doublewords Integers to Packed Double-Precision
+Floating-Point Values
+**** CVTDQ2PS
+Convert Packed Doublewords Integers to Packed Single-Precision
+Floating-Point Values
+**** CVTPD2DQ
+Convert Packet Double-Precision Floating-Point Values to
+Packet Doublwword Integers 
+**** CVTPD2PI
+Convert Packet Double Precision FP Values to Packed Dword Integers
+**** CVTPD2PS
+
+**** CVTPI2PD
+
+**** CVTPI2PS
+
+**** CVTPS2DQ
+**** CVTPS2PD
+**** CVTPS2PI
+**** CVTSI2SD
+**** CVTSS2SD
+**** CVTSS2SI
+**** CVTTPD2DQ
+**** CVTTPD2PI
+**** CVTTPS2DQ
+**** CVTTPS2PI
+**** CVTTSD2SI
+**** CVTTSS2SI

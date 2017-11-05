@@ -1,0 +1,16 @@
+* PADD{B,W,D,Q} p860 Add Packed Integers
+
+~PADDB xmm1, xmm2/m128~
+
+** Descripcion
+
+Realiza la suma de los enteros empaquetados (bytes, words, doublewords, 
+quadwords) en ambos operandos, guardando el resultado en el primer operando
+(*dest*).
+
+PADDB suma /bytes/, PADDW suma /words/, PADDD suma /doublewords/, PADDQ suma 
+/quadwords/.
+
+Si se produce un overflow, el carry es ignorado.
+
+
