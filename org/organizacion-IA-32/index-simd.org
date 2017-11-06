@@ -53,20 +53,54 @@ Packet Doublwword Integers
 **** CVTPD2PI
 Convert Packet Double Precision FP Values to Packed Dword Integers
 **** CVTPD2PS
-
+Convert Packed Double-Precision Floating-Point Values to Packed
+Single Precision Floating-Point Values
 **** CVTPI2PD
-
+Convert Packed Dword Integers to Packed Double Precision FP Values
 **** CVTPI2PS
-
+Convert Packed Dword Integers to Packed Single-PrecisionFP Values
 **** CVTPS2DQ
+Convert Packed Single-Precision Floating-Point Values to Packed Signed 
+Dword Integer Values
 **** CVTPS2PD
+Convert Packed Single-Precision Floating-Point Values to Packed Double 
+Precision Floating-Point Values
 **** CVTPS2PI
+Convert Packed Single-Precision Floating-Point Values to Packed Dword
+Integers
 **** CVTSI2SD
+Convert Dword Integer to Scalar Double-Precision Floating-Point Value
+**** CVTSI2SS
+Convert Dword Integer to Scalar Single-Precision Floating-Point Value
 **** CVTSS2SD
+Convert Scalar Single-Precision Floating-Point Value to Scalar
+Double-Precision Floating-Point Value
 **** CVTSS2SI
+Convert Scalar Single-Precision Floating-Point Value to Dword Integer
 **** CVTTPD2DQ
+Convert with Truncation Packed Double-Precision Floating-Point Values
+to Packed Dword Integers
 **** CVTTPD2PI
+Convert with Truncation Packed Double-Precision Floating-Point Values
+to Packed Dword Integers 
 **** CVTTPS2DQ
+Convert with Truncation Packed Single-Precision Floating-Point Values
+to Packed Signed Dword Integer Values
 **** CVTTPS2PI
+Convert with Truncation Packed Single-Precision Floating-Point Values
+to Packed Dword Integers
 **** CVTTSD2SI
+Convert with Truncation Scalar Double-Precision Floating-Point Values
+to Signed Integer
 **** CVTTSS2SI
+*** Movimiento de datos
+**** MOV{D,Q} 
+Move Dword/Qword
+**** MOVDDUP
+Replicate Double FP Values
+**** MOVDQ{A,A32/64}
+Move Alinged Packed Integers
+**** MOVDQ{U,U8/16/32/64}
+Move Unaligned Packed Integer Values
+**** MOVDQ2Q
+Move Qword from XMM to MMX Technology Register
