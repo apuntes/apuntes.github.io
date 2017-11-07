@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>segmentacion</title>
-<!-- 2017-11-06 lun. 10:15 -->
+<title>simd-paddb</title>
+<!-- 2017-11-07 mar. 09:21 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <style type="text/css">
@@ -136,86 +136,38 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">segmentacion</h1>
+<h1 class="title">simd-paddb</h1>
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Segmentación</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> PADD{B,W,D,Q} p860 Add Packed Integers</h2>
 <div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Direcciones lineales</h3>
-<div class="outline-text-3" id="text-1-1">
 <p>
-Una dirección lógica es un <b><b>selector de segmento</b></b> y un <b><b>offset</b></b>.
+<code>PADDB xmm1, xmm2/m128</code>
 </p>
-
-<p>
-Ejemplo:
-</p>
-
-<div class="org-src-container">
-
-<pre class="src src-text">selector de segmento
-      |
-      |
-      v
-    0x10:0x000008FE   &lt;--- offset
-</pre>
 </div>
 
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Descripcion</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-Dada una dirección lógica, se obtiene una dirección lineal del siguiente
-modo:
+Realiza la suma de los enteros empaquetados (bytes, words, doublewords, 
+quadwords) en ambos operandos, guardando el resultado en el primer operando
+(<b>dest</b>).
 </p>
 
 <p>
-Obviamente, el selector de segmento se usa para obtener el segmento. De ese
-selector se obtiene el índice de la tabla -GDT (Global Descriptor Table) si
-el tercer bit es 1- donde se busca un <span class="underline"><span class="underline">selector de segmento</span></span>.
+PADDB suma <i>bytes</i>, PADDW suma <i>words</i>, PADDD suma <i>doublewords</i>, PADDQ suma 
+<i>quadwords</i>.
 </p>
 
 <p>
-Pero el índice no se conforma de todos
-los bits del <span class="underline">selector de segmento</span>, sino los 13 bits más significativos (del
-bit 3 al 15). 
-</p>
-
-<pre class="example" id="selector-de-segmento">
-Selector de segmento 
-======== == ========
-
-
-  15            3 2  0 
-  +-------------+-+--+
-  |             | |  | &lt;--- Requested Provilege Level
-  +-------------+-+--+
-         |       |  
-      índice    Table
-               Indicator
-</pre>
-
-<p>
-Retomando nuestro ejemplo:
-<code>10h = 0001 0000b</code>, de modo que el índice es 
-<code>10b = 2h</code>, o sea 2. Como TI (Table Indicator) es 0 la dirección se 
-busca en la GDT, el tercer <span class="underline"><span class="underline">descriptor de segmento</span></span> que haya (pues el índice 
-2 selecciona el tercero). 
-</p>
-
-<p>
-El <span class="underline">descriptor de segmento</span> es una estrutura con varios campos, uno de los 
-cuales es el <span class="underline"><span class="underline">base address</span></span> que indica dónde comienza el segmento en cuestión.
-Otro campo es el <span class="underline"><span class="underline">limit</span></span>, que indica el tamaño en bytes del segmento.
-</p>
-
-<p>
-Entonces, el <span class="underline">offset</span> de la dirección lógica se suma a la <span class="underline">base address</span> y así
-se obtiene la dirección lineal.
+Si se produce un overflow, el carry es ignorado.
 </p>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2017-11-06 lun. 10:15</p>
+<p class="date">Created: 2017-11-07 mar. 09:21</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
