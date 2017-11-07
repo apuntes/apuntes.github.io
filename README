@@ -1,0 +1,22 @@
+README
+------
+
+El contenido de la pagina esta en ./org. Para q este un poco más ordenado
+(y para no tener que hacer distintas ramas) en ./org hay nada más que un
+index y después todo el resto del contenido esta en ./org/site.
+
+Para generar el contenido en html hacer
+$ make imagenes
+
+También puede usarse
+$ make org
+
+Pero debido aparentemente a un problema en github pages no se ven las
+fórmulas escritas en látex, entonces tuve que usar
+
+#+OPTIONS: tex:dvipng
+
+para generar los pngs con las mismas, y esto implica tener que usar el
+primero de los makes mencionados para copiar las imágenes a una
+ubicación correcta.
+
