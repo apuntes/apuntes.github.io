@@ -1,9 +1,10 @@
 #+TITLE:Apuntes
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 
+Para agrager cosas a esta página:
+https://github.com/apuntes/apuntes.github.io
 
-Aca van algunos apuntas desordenados.
 
-* [[./site/computabilidad/index.html][logica]]
+* [[./site/lyc/index.html][logica]]
 
 * [[./site/IA-32/index.html][IA-32]]

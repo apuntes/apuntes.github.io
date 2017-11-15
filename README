@@ -1,6 +1,8 @@
 README
 ------
 
+Para contribuir con apuntes.github.io
+
 El contenido de la pagina esta en ./org. Para q este un poco más ordenado
 (y para no tener que hacer distintas ramas) en ./org hay nada más que un
 index y después todo el resto del contenido esta en ./org/site.

@@ -1,0 +1,25 @@
+* practica 5
+** ejercicio 3
+*** Enunciado: 
+Sea $\Gamma$ una conjunto de fórmulas del lenguaje
+$\{\neg, \Rightarrow\}$. Demostrar que $\{Gamma\}$
+es inconsistente sii $\Gamma \vdash \alpha$ para
+toda $\alpha$.
+*** Solución
+Como $\Gamma$ es inconsistente, entonces 
+$\Gamma \cup \{\alpha\}$ también lo es, ya que lo que puedo
+demostrar en el primer caso también lo puedo hacer en el segundo.
+
+Por la *proposición* de la página 170 de la teórica, entonces:
+
+$$
+\Gamma \vdash \neg \alpha
+$$
+
+Y análogamente con $\neg \alpha$ obtenemos
+
+$$
+\Gamma \vdash \neg \neg \alpha
+$$
+
+Falta probar $\neg\neg \alpha \Rightarrow \alpha$
