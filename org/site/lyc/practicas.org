@@ -4,7 +4,7 @@
 ** ejercicio 3
 *** Enunciado: 
 Sea $\Gamma$ una conjunto de fórmulas del lenguaje
-$\{\neg, \Rightarrow\}$. Demostrar que $\{Gamma\}$
+$\{\neg, \Rightarrow\}$. Demostrar que $\{\Gamma\}$
 es inconsistente sii $\Gamma \vdash \alpha$ para
 toda $\alpha$.
 *** Solución
