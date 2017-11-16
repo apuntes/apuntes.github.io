@@ -3,25 +3,70 @@
 * practica 5
 ** ejercicio 3
 *** Enunciado: 
-Sea $\Gamma$ una conjunto de fórmulas del lenguaje
+Sea $\Gamma$ una conjunto de fÃ³rmulas del lenguaje
 $\{\neg, \Rightarrow\}$. Demostrar que $\{Gamma\}$
 es inconsistente sii $\Gamma \vdash \alpha$ para
 toda $\alpha$.
-*** Solución
+*** SoluciÃ³n
 Como $\Gamma$ es inconsistente, entonces 
-$\Gamma \cup \{\alpha\}$ también lo es, ya que lo que puedo
-demostrar en el primer caso también lo puedo hacer en el segundo.
+$\Gamma \cup \{\alpha\}$ tambiÃ©n lo es, ya que lo que puedo
+demostrar en el primer caso tambiÃ©n lo puedo hacer en el segundo.
 
-Por la *proposición* de la página 170 de la teórica, entonces:
+Por la *proposiciÃ³n* de la pÃ¡gina 170 de la teÃ³rica, entonces:
 
 $$
 \Gamma \vdash \neg \alpha
 $$
 
-Y análogamente con $\neg \alpha$ obtenemos
+Y anÃ¡logamente con $\neg \alpha$ obtenemos
 
 $$
 \Gamma \vdash \neg \neg \alpha
 $$
 
 Falta probar $\neg\neg \alpha \Rightarrow \alpha$
+** ejercicio 14
+*** enunciado
+Sea $\Gamma$ un conjunto de fórmulas que verifica la siguiente propiedad:
+
+Si $\alpha, \beta \in \Gamma$, entonces
+ $\alpha \to \beta$ o $\beta \to \alpha$.
+
+Probar  que si $\Gamma \vDash \gamma$, entonces existe $\delta \in \Gamma$
+tal que $\{\delta\} \vDash \gamma$.
+*** Solución
+
+Prueba por inducción en el tamaño $n$ de la  demostración.
+
+Caso base: $n = 1$, o sea la demostración tiene una sola línea.
+
+En este caso:
++ $\gamma$  es un axioma, en cuyo caso tomamos $\alpha \in \Gamma$
+  y por correctitud: $\{\alpha\} \vDash \gamma$.
++ $\gamma \in \Gamma$, entonces directamente $\{\gamma\}\vDash\gamma$.
+
+Ahora supongamos $n > 1$ y para $k < n$ se cumple que existe tal fórmula 
+$\gamma$.
++ $\gamma$  es un axioma, ídem caso base.
++ $\gamma \in \Gamma$, ídem.
++ $\gamma$ se obtiene por modus ponens.
+  En este caso tenemos $\phi, \delta_1$ y $\delta_2 \Gamma$ tales que:
+  - $\Gamma \vdash \phi$
+  - $\Gamma \vdash \phi \to \gamma$
+  - $\{\delta_1\} \vdash \phi$
+  - $\{\delta_2\} \vdash \phi \to \gamma$
+  Además, por la condición de la consigna debe ser:
+  - $\vDash\delta_1 \to \delta_2$ o  $\vDash\delta_2 \to \delta_1$
+  Bueno, si $\delta_1 \to \delta_2$, entonces, usando el teorema de
+  la deducción y la correctitud obtenemos:
+  $\{\delta_1\}\vDash\delta_2$.
+
+  De este modo $\{\delta_1\}\vDash\gamma$.
+  Similarmente si $\delta_2 \to \delta_1$, entonces, también usando el
+  teorema de la deducción y la correctitud de la deducción
+  $\{\delta_2\}\vDash\delta_1$.
+
+  Así $\{\delta_2\} \vDash \gamma$.
+
+
+
