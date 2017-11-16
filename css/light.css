@@ -1,0 +1,198 @@
+/*
+----------------------------------------------------------------------------
+EmacsWiki light theme
+----------------------------------------------------------------------------
+A combination of some of the existing themes on the EmacsWiki at
+http://emacswiki.org, with various other additions.
+The base theme was the cali2.css theme - question marks indicate things left
+over which might be removable.
+A dark subtheme is implemented by an additional 'dark' class on the main
+<body> element.
+Released under the MIT License.
+----------------------------------------------------------------------------
+*/
+
+
+/* ---------------------------------------------------------------------- */
+/* Base */
+/* ---------------------------------------------------------------------- */
+
+body {
+    margin: 0 0 1.5em 0;
+    padding: 1em 1em;
+    color: #111;
+    background-color: #fffefe;
+    font-size: 100%;
+}
+body.dark {
+    color: #ccc;
+    background-color: #181818;
+}
+
+
+/* Code - used for keysequences, function references (anything in `...') */
+/* Pre - used for blocks of code */
+code, pre {
+    color: #444;
+    background-color: #f9f8f8;
+    border: 1px solid #ddd;
+
+    font-family: monospace;
+
+    /* For some reason, using a different font than the default monospace */
+    /* increases the size of the text, so need to counteract that here */
+    /* font-size: 0.8em; */
+}
+body.dark code, body.dark pre {
+    color: #ccc;
+    background-color: #222;
+    border: 1px solid #333;
+}
+code {
+    padding: 1px;
+}
+pre {
+    margin: 1em 0;
+    padding: 1em 2em;
+OAOAOA    overflow: auto; /* add horizontal scrollbar if necessary */
+OAOAOA}
+OAOAOA
+OAOAOA
+
+
+OAOAOA/* Links */
+a {
+    color: #06b;
+    background-color: inherit;
+
+    /* This works on firefox, but just shows as a plain underline in chrome, which looks terrible */
+    /* text-decoration: underline dotted #09c; */
+
+    /* Faking a dotted underline, works on all browsers but can't adjust position */
+    text-decoration: none;
+    /* border-bottom: 1px dotted #09c; */
+}
+a:link, a:visited {
+    background-color: inherit;
+}
+a:active, a:hover {
+    color: #09d;
+}
+
+body.dark a {
+    color: #9c5;
+}
+body.dark a:active, body.dark a:hover {
+    color: #ae6;
+}
+/* external links */
+/* a.url:before { content: "\2197"; } */
+/* .safari a.url:before { content: url(http://www.emacswiki.org/alex/pics/arrow.png); } */
+/* image links */
+a.image img {
+    border: none;
+}
+a.left {
+    float: left;
+    margin: 20px;
+}
+a.right {
+    float: right;
+    margin: 20px;
+}
+
+
+/* Images */
+/* dim images for dark theme */
+body.dark img {filter: brightness(70%);}
+body.dark img:hover {filter: brightness(100%);}
+
+
+/* Headers */
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    line-height: normal;
+    clear: both;
+}
+@media (max-width: 580px) {
+    h2 {font-size: 1.5em;}
+    h3 {font-size: 1.2em;}
+    h4 {font-size: 1.7em;}
+}
+@media (min-width: 580px) {
+    h2 {font-size: 1.7em;}
+    h3 {font-size: 1.3em;}
+    h4 {font-size: 1em;}
+}
+
+
+/* h1 */
+/* defined further below */
+
+/* h2 */
+h2 {
+    /* line under header */
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #aaa;
+
+    /* divider between sections */
+    /* margin-top: 1em; */
+    /* padding-top: 1em; */
+    /* border-top: 1px solid #bbb; */
+    /* margin-bottom: 1em; */
+}
+
+/* h3 */
+h3 {
+    font-style: italic;
+    margin-top: 0.1em;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* h4 */
+h4 {
+    font-style: italic;
+    margin-top: 0.1em;
+    padding-top: 0.5em;
+}
+
+
+/* hr */
+hr {
+    border: 0;
+/*
+----------------------------------------------------------------------------
+EmacsWiki light theme
+----------------------------------------------------------------------------
+A combination of some of the existing themes on the EmacsWiki at
+http://emacswiki.org, with various other additions.
+The base theme was the cali2.css theme - question marks indicate things left
+over which might be removable.
+A dark subtheme is implemented by an additional 'dark' class on the main
+<body> element.
+Released under the MIT License.
+----------------------------------------------------------------------------
+*/
+
+
+/* ---------------------------------------------------------------------- */
+/* Base */
+/* ---------------------------------------------------------------------- */
+
+body {
+    margin: 0 0 1.5em 0;
+    padding: 1em 1em;
+    color: #111;
+    background-color: #fffefe;
+    font-size: 100%;
+}
+body.dark {
+    color: #ccc;
+    background-color: #181818;
+}
+
+
