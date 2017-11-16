@@ -1,3 +1,5 @@
+#+OPTIONS: tex:dvipng 
+
 * practica 5
 ** ejercicio 3
 *** Enunciado: 
