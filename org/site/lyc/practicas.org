@@ -3,8 +3,9 @@
 * practica 5
 ** ejercicio 3
 *** Enunciado: 
-Sea $\Gamma$ una conjunto de fÃ³rmulas del lenguaje
-$\{\neg, \Rightarrow\}$. Demostrar que $\{Gamma\}$
+Sea $\Gamma$ una conjunto de fórmulas del lenguaje
+$\{\neg, \Rightarrow\}$. Demostrar que $\{\Gamma\}$
+
 es inconsistente sii $\Gamma \vdash \alpha$ para
 toda $\alpha$.
 *** SoluciÃ³n
